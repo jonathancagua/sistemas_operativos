@@ -17,7 +17,7 @@ int main(){
     switch(pidP){
         case hijo:
             close (fd[0]);
-            write(fd[1],"hola =)",7);
+            write(fd[1],"hola =) \n",10);
             close(fd[1]);
             exit(0);
             break;
@@ -27,6 +27,7 @@ int main(){
         default:
             close (fd[1]);
             n_bytes = read(fd[0],buf,sizeof(buf));
+            buf[n_bytes] = 0x00;
             printf("Padre lee %d : %s",n_bytes,buf);
             close(fd[0]);
             break;
