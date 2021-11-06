@@ -1,3 +1,17 @@
+/**
+ * @file fork-pipe.c
+ * @author Jonathan
+ * @brief Se va crear un pipe entre un proceso padre y un proceso hijo,
+ *        el hijo va escribir mientras que el padre va escuchar.
+ *        Recordemos que en el hijo debe eliminar el proceso de lectura
+ *        y el padre el proceso de escritura.
+ * @version 0.1
+ * @date 2021-11-06
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
